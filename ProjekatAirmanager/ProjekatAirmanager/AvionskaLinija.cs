@@ -12,6 +12,8 @@ namespace ProjekatAirmanager
         Aerodrom pocetniAerodrom;
         Aerodrom krajnjiAerodrom;
         public int razdaljina;
+        public bool[][] raspored; //matrica 24x7
+        //ako je 1 recimo na poziciji [3][18] to znači da je avion na ovoj liniji u stanju leta četvrtkom od 18:00 do 19:00
 
         public AvionskaLinija(AvionskaLinija al)
         {

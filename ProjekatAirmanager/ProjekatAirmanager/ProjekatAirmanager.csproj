@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Aerodrom.cs" />
     <Compile Include="Avion.cs" />
+    <Compile Include="AvionskaLinija.cs" />
     <Compile Include="BiznisPutnik.cs" />
     <Compile Include="Dimenzije.cs" />
     <Compile Include="EkonomskiPutnik.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Let.cs" />
     <Compile Include="ParkingMesto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

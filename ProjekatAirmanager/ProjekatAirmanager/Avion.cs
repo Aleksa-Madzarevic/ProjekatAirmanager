@@ -14,7 +14,7 @@ namespace ProjekatAirmanager
         int brpilota;
         double maksdist;
         Dimenzije dim;
-        public Avion(double c, int pu, int s, int pi, double m, double v,double š, double d Dimenzije d)
+        public Avion(double c, int pu, int s, int pi, double m, double v,double š, double d)
         {
             cena = c;
             brputnika = pu;

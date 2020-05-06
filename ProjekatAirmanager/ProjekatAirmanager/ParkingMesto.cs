@@ -37,8 +37,4 @@ namespace ProjekatAirmanager
 
     }
 
-    class ParkingMestoZaIznajmljivanje: ParkingMesto
-    {
-
-    }
 }

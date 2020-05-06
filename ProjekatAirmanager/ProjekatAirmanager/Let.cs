@@ -10,8 +10,7 @@ namespace ProjekatAirmanager
     {
         double duzinaTrajanja;
         double zarada;
-        int brojPutnika;
-        Putnik[] nizPutnika;
+        List<Putnik> nizPutnika;
         Avion airplane;
         bool desioSeIncident;
 
@@ -19,30 +18,20 @@ namespace ProjekatAirmanager
         {
             duzinaTrajanja = l.duzinaTrajanja;
             zarada = l.zarada;
-            brojPutnika = l.brojPutnika;
+            
             airplane = l.airplane;
             desioSeIncident = l.desioSeIncident;
-
-            nizPutnika = new Putnik[l.brojPutnika + 10];
-            for (int i = 0; i < l.brojPutnika; i++)
-            {
-                nizPutnika[i] = new Putnik(l.nizPutnika[i]);
-            }
+            this.nizPutnika = new List<Putnik>(l.nizPutnika);
         }
 
-        public Let(double duztr, double zar, int brput, Avion a, bool inc, Putnik[] niz)
+        public Let(double duztr, double zar, Avion a, bool inc, List<Putnik> niz)
         {
             duzinaTrajanja = duztr;
             zarada = zar;
-            brojPutnika = brput;
             airplane = a;
             desioSeIncident = inc;
-
-            nizPutnika = new Putnik[niz.Length];
-            for (int i = 0; i < niz.Length; i++)
-            {
-                nizPutnika[i] = new Putnik(niz[i]);
-            }
+            this.nizPutnika = new List<Putnik>(niz);
+            
         }
 
         public double DuzinaTrajanja
@@ -59,8 +48,7 @@ namespace ProjekatAirmanager
 
         public int BrojPutnika
         {
-            get { return brojPutnika; }
-            set { brojPutnika = value; }
+            get { return nizPutnika.Count; }
         }
 
         public Avion Airplane
@@ -77,7 +65,7 @@ namespace ProjekatAirmanager
 
         public Putnik this[int i]
         {
-            get { if (i < brojPutnika) return nizPutnika[i]; else return null; }
+            get { return nizPutnika[i]; }
             set { nizPutnika[i] = value; }
         }
 
