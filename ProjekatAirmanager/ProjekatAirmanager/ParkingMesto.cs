@@ -10,17 +10,19 @@ namespace ProjekatAirmanager
     {
         private Dimenzije dimenzije;
         int CenaPoSatu;
-
-        public ParkingMesto(Dimenzije d, int c)
+        Aerodrom a;
+        public ParkingMesto(Dimenzije d, int c, Aerodrom a)
         {
             dimenzije = d;
             CenaPoSatu = c;
+            this.a = a;
         }
 
         public ParkingMesto(ParkingMesto p)
         {
             dimenzije = p.dimenzije;
             CenaPoSatu = p.CenaPoSatu;
+            this.a = p.a;
         }
 
         public Dimenzije Dimenzije
@@ -35,6 +37,11 @@ namespace ProjekatAirmanager
             set { CenaPoSatu = value; }
         }
 
+        public Aerodrom Aerodrom
+        {
+            get { return a; }
+            set { a = value; }
+        }
     }
 
 }

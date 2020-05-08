@@ -9,7 +9,6 @@ namespace ProjekatAirmanager
     class Let
     {
         double duzinaTrajanja;
-        double zarada;
         List<Putnik> nizPutnika;
         Avion airplane;
         bool desioSeIncident;
@@ -17,17 +16,15 @@ namespace ProjekatAirmanager
         public Let(Let l)
         {
             duzinaTrajanja = l.duzinaTrajanja;
-            zarada = l.zarada;
             
             airplane = l.airplane;
             desioSeIncident = l.desioSeIncident;
             this.nizPutnika = new List<Putnik>(l.nizPutnika);
         }
 
-        public Let(double duztr, double zar, Avion a, bool inc, List<Putnik> niz)
+        public Let(double duztr, Avion a, bool inc, List<Putnik> niz)
         {
             duzinaTrajanja = duztr;
-            zarada = zar;
             airplane = a;
             desioSeIncident = inc;
             this.nizPutnika = new List<Putnik>(niz);
@@ -40,11 +37,7 @@ namespace ProjekatAirmanager
             set { duzinaTrajanja = value; }
         }
 
-        public double Zarada
-        {
-            get { return zarada; }
-            set { zarada = value; }
-        }
+        
 
         public int BrojPutnika
         {

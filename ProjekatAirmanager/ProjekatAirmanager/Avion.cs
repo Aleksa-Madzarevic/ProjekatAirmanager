@@ -14,7 +14,8 @@ namespace ProjekatAirmanager
         int brpilota;
         double maksdist;
         Dimenzije dim;
-        public Avion(double c, int pu, int s, int pi, double m, double v,double š, double d)
+        double brzina;
+        public Avion(double c, int pu, int s, int pi, double m, double v,double š, double d, double b)
         {
             cena = c;
             brputnika = pu;
@@ -22,6 +23,7 @@ namespace ProjekatAirmanager
             brpilota =  pi;
             maksdist = m;
             dim = new Dimenzije(v,š,d);
+            brzina = b;
         }
         public Avion(Avion a)
         {
@@ -31,6 +33,7 @@ namespace ProjekatAirmanager
             brpilota = a.brpilota;
             maksdist = a.maksdist;
             dim = a.dim;
+            brzina = a.brzina;
         }
         public double Cena
         {
@@ -58,6 +61,9 @@ namespace ProjekatAirmanager
             get { return maksdist; }
             set { maksdist = value; }
         }
-
+        public double Brzina
+        {
+            get { return brzina; }
+        }
     }
 }
