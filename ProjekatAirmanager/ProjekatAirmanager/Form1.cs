@@ -12,14 +12,46 @@ namespace ProjekatAirmanager
 {
     public partial class Form1 : Form
     {
+        //1 minut = 1 dan
+        struct Avionce
+        {
+            PictureBox slicica;
+            Tuple<double, double> A;
+            Tuple<double, double> B;
+            bool SrusioSe;
+            double koef;// ovo je izmedju 0 i 1
+            double brzina;
+        }
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        //Graphics g
+        //struktura SlikaAvion
+        List<Avionce> Avioni;
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+        public static void nacrtajLet(Graphics g, Tuple<double, double> A, Tuple<double, double> B, bool inc, double brzina)
+        {
+            
+        }
+        public static void pomeriAvione()
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            timer.Start();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }
