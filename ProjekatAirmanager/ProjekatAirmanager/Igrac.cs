@@ -42,7 +42,6 @@ namespace ProjekatAirmanager
         public List<Avion> Avioni { get => avioni; set => avioni = value; }
         public void izvrsiLet(int dan, int sat, int brojLinije, Graphics g)
         {
-            
             AvionskaLinija avionlinija = linije[brojLinije];
             Avion a = avionlinija.Avioni[avionlinija.Raspored[dan,sat]];
             int brojPutnika = Convert.ToInt32(Math.Round(nasum(Convert.ToDouble(avionlinija.ProsecanBrPutnika), 1.0)));
@@ -69,7 +68,7 @@ namespace ProjekatAirmanager
             int c = rand.Next(1,10000);
             if(c<granica)
             {
-                Form1.nacrtajLet(g, avionlinija.PocetniAerodrom.Kord, avionlinija.KrajnjiAerodrom.Kord, incident, a.Brzina);
+                //Form1.nacrtajLet(g, avionlinija.PocetniAerodrom.Kord, avionlinija.KrajnjiAerodrom.Kord, incident, a.Brzina);
             }
         }
 

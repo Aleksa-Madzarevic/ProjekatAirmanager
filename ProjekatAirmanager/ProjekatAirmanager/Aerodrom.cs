@@ -25,13 +25,35 @@ namespace ProjekatAirmanager
             this.cenaPoGejtu = a.cenaPoGejtu;
         }
 
-        public double Rastojanje(Tuple<double, double> poz)
+        public double Rastojanje(Aerodrom a) //vraca rastojanje u kilometrima
         {
-            return Math.Sqrt((kord.Item1 - poz.Item1) * (kord.Item1 - poz.Item1) + (kord.Item2 - poz.Item2) * (kord.Item2 - poz.Item2));
-        }
-        public double Rastojanje(Aerodrom a)
-        {
-            return Math.Sqrt((kord.Item1 - a.kord.Item1) * (kord.Item1 - a.kord.Item1) + (kord.Item2 - a.kord.Item2) * (kord.Item2 - a.kord.Item2));
+            double R = 6400; //aproksimacija da je Zemlja lopta poluprecnika 6400km
+            double thisRad1 = this.kord.Item1 / (2 * Math.PI);
+            double thisRad2 = this.kord.Item2 / (2 * Math.PI);
+            double rad1 = a.kord.Item1;
+            double rad2 = a.kord.Item2;
+
+            if (rad1 == thisRad1 && rad2 == thisRad2)
+            {
+                return 0;
+            }
+
+            double thisZ = R * Math.Sin(thisRad2);
+            double thisX = R * Math.Cos(thisRad2) * Math.Sin(thisRad1);
+            double thisY = R * Math.Cos(thisRad2) * Math.Cos(thisRad1);
+            double Z = R * Math.Sin(rad2);
+            double X = R * Math.Cos(rad2) * Math.Sin(rad1);
+            double Y = R * Math.Cos(rad2) * Math.Cos(rad1);
+
+            double EuclidDis = Math.Sqrt((X - thisX) * (X - thisX) + (Y - thisY) * (Y - thisY) + (Z - thisZ) * (Z - thisZ));
+
+            double sin_HalfAlpha = EuclidDis / (2 * R);
+            double cos_HalfAlpha = Math.Sqrt(1 - sin_HalfAlpha * sin_HalfAlpha);
+            double sin_Alpha = 2 * sin_HalfAlpha * cos_HalfAlpha;
+
+            double Alpha = Math.Asin(sin_Alpha);
+
+            return R * Alpha;
         }
 
         public double CenaPoGejtu

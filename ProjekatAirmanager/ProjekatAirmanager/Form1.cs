@@ -13,7 +13,7 @@ namespace ProjekatAirmanager
     public partial class Form1 : Form
     {
         //1 minut = 1 dan
-        struct Avionce
+        public struct Avionce
         {
             PictureBox slicica;
             Tuple<double, double> A;
@@ -28,33 +28,41 @@ namespace ProjekatAirmanager
             InitializeComponent();
         }
         //Graphics g
-        //struktura SlikaAvion
         List<Avionce> Avioni;
         int trajanjePoteza; //u sekundama
-        enum
-        {
-            
-        }
+        Igrac[] players;
 
         private void button1_Click(object sender, EventArgs e)
         {
            
         }
-        public static void nacrtajLet(Graphics g, Tuple<double, double> A, Tuple<double, double> B, bool inc, double brzina)
-        {
-            Avionce avion=new Avionce();
+        public static void nacrtajLet(Graphics g, Tuple<double, double> A, Tuple<double, double> B, bool inc, double brzina, double k)
+        {/*
+            Avionce avion = new Avionce
+            {
+                A = A,
+                B = B,
+                SrusioSe = inc,
+                koef = k,
+                brzina = brz
+            };
 
+            Avioni.Add(avion);
 
+            */
         }
         public static void pomeriAvione()
         {
-            for (int i = 0; i < Avionce.capacity; i++) { 
+           /* for (int i = 0; i < Avionce.capacity; i++) { 
                 
-            }
+            }*/
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            UlaznaForma ulazna = new UlaznaForma(this);
+            ulazna.Show();
 
             timer.Start();
         }
