@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjekatAirmanager
 {
@@ -14,6 +15,7 @@ namespace ProjekatAirmanager
         List<AvionskaLinija> linije;
         List<Avion> avioni;
         List<Putnik> putnici;
+        List<Let> flights;
         int novac;
         double osoblje; //broj između 0 i 1 koji određuje koliko se izdvaja za osoblje
         double marketing; //broj između 0 i 1 koji određuje koliko se izdvaja za marketing
@@ -40,7 +42,7 @@ namespace ProjekatAirmanager
         public List<ParkingMesto> ParkingM { get => parkingM; set => parkingM = value; }
         public List<AvionskaLinija> Linije { get => linije; set => linije = value; }
         public List<Avion> Avioni { get => avioni; set => avioni = value; }
-        public void izvrsiLet(int dan, int sat, int brojLinije, Graphics g)
+        public void izvrsiLet(int dan, int sat, int brojLinije, Form1 form)
         {
             AvionskaLinija avionlinija = linije[brojLinije];
             Avion a = avionlinija.Avioni[avionlinija.Raspored[dan,sat]];
@@ -63,12 +65,22 @@ namespace ProjekatAirmanager
             {
                 incident = true;
             }
-            Let l = new Let(avionlinija.PocetniAerodrom.Rastojanje(avionlinija.KrajnjiAerodrom) / a.Brzina, a, incident, nizPutnika);
+            int duration = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 1; j < 24; j++)
+                {
+                    if (avionlinija.Raspored[(dan + i) % 7, (sat + j) % 24] < 0)
+                        duration++;
+                }
+            }
+            Let l = new Let(duration, a, incident, nizPutnika);
+            flights.Add(l);
             double granica = sansaDaSeNacrtaLet * 10000;
             int c = rand.Next(1,10000);
             if(c<granica)
             {
-                //Form1.nacrtajLet(g, avionlinija.PocetniAerodrom.Kord, avionlinija.KrajnjiAerodrom.Kord, incident, a.Brzina);
+                form.nacrtajLet(form.G, avionlinija.PocetniAerodrom.Kord, avionlinija.KrajnjiAerodrom.Kord, incident, a.Brzina);
             }
         }
 

@@ -63,9 +63,19 @@ namespace ProjekatAirmanager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap festivalclaca_cat_world_map_png_transparent_24230 {
+        internal static System.Drawing.Bitmap avion {
             get {
-                object obj = ResourceManager.GetObject("festivalclaca.cat-world-map-png-transparent-24230", resourceCulture);
+                object obj = ResourceManager.GetObject("avion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapaSveta {
+            get {
+                object obj = ResourceManager.GetObject("mapaSveta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

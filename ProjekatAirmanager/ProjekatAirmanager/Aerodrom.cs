@@ -9,7 +9,7 @@ namespace ProjekatAirmanager
     class Aerodrom
     {
         List<ParkingMesto> parkingM;
-        Tuple<double, double> kord;
+        Tuple<double, double> kord;//prva pripada (-180,180], a druga [-90,90]
         double cenaPoGejtu;
 
         public Aerodrom(List<ParkingMesto> parkingM, Tuple<double, double> kord, double cenaPoGejtu)

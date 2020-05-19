@@ -42,7 +42,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::ProjekatAirmanager.Properties.Resources.festivalclaca_cat_world_map_png_transparent_24230;
+            this.pictureBox1.BackgroundImage = global::ProjekatAirmanager.Properties.Resources.mapaSveta;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 43);
             this.pictureBox1.Name = "pictureBox1";

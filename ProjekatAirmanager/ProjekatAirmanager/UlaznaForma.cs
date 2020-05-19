@@ -19,10 +19,11 @@ namespace ProjekatAirmanager
             InitializeComponent();
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             glavna.Enabled=true;
-
             this.Close();
         }
     }
