@@ -73,6 +73,16 @@ namespace ProjekatAirmanager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap incident {
+            get {
+                object obj = ResourceManager.GetObject("incident", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mapaSveta {
             get {
                 object obj = ResourceManager.GetObject("mapaSveta", resourceCulture);

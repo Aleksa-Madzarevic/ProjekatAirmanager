@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjekatAirmanager
 {
-    class Aerodrom
+    public class Aerodrom
     {
         List<ParkingMesto> parkingM;
         Tuple<double, double> kord;//prva pripada (-180,180], a druga [-90,90]
@@ -54,6 +54,45 @@ namespace ProjekatAirmanager
             double Alpha = Math.Asin(sin_Alpha);
 
             return R * Alpha;
+        }
+        public double Euklid(Aerodrom a)
+        {
+            double disX = this.kord.Item1 - a.kord.Item1;
+            double disY = this.kord.Item2 - a.kord.Item2;
+            return Math.Sqrt(disX * disX + disY * disY);
+        }
+        public double Euklid(Tuple<double, double> t)
+        {
+            double disX = this.kord.Item1 - t.Item1;
+            double disY = this.kord.Item2 - t.Item2;
+            return Math.Sqrt(disX * disX + disY * disY);
+        }
+        public double Ugao(Aerodrom b)
+        {
+            if (b.kord.Item1 == this.kord.Item1)
+            {
+                if (b.kord.Item2 > this.kord.Item2) return 0;
+                else if (b.kord.Item2 == this.kord.Item2) return -1;
+                else return Math.PI;
+            }
+
+            double disAB = Euklid(b);
+            Tuple<double, double> c = new Tuple<double, double>(this.kord.Item1, this.kord.Item2 + disAB);
+
+            double disBC = b.Euklid(c);
+            double sin_HalfAlpha = disBC / (2 * disAB);
+            double cos_HalfAlpha = Math.Sqrt(1 - sin_HalfAlpha * sin_HalfAlpha);
+            double sin_Alpha = 2 * sin_HalfAlpha * cos_HalfAlpha;
+            double Alpha = Math.Asin(sin_Alpha);
+
+            if (this.kord.Item1 < b.kord.Item1)
+            {
+                return Alpha;
+            }
+            else
+            {
+                return 2 * Math.PI - Alpha;
+            }
         }
 
         public double CenaPoGejtu

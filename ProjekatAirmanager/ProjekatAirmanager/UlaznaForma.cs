@@ -23,8 +23,27 @@ namespace ProjekatAirmanager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            glavna.Enabled=true;
+            glavna.GameDuration = Convert.ToInt32(gameDuration.Value);
+            glavna.NumberOfPlayers = Convert.ToInt32(numberOfPlayers.Value);
+            glavna.StartingMoney = Convert.ToInt32(startingMoney.Value);
+            glavna.MoveDuration = Convert.ToInt32(moveDuration.Value);
+            if (RBtnEkstremno.Checked) glavna.Tezina = 3;
+            else if (RBtnTeško.Checked) glavna.Tezina = 2;
+            else if (RBtnSrednje.Checked) glavna.Tezina = 1;
+            else glavna.Tezina  =  0;
+
+            glavna.Enabled = true;
             this.Close();
+        }
+
+        private void UlaznaForma_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
