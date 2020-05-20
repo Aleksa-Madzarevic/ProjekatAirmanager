@@ -117,5 +117,16 @@
   <ItemGroup>
     <None Include="Resources\avion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incident.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewFile1.txt" />
+    <Content Include="NewFile2.txt" />
+    <Content Include="Resources\NewFile1.txt" />
+    <Content Include="Resources\NewFile2.txt" />
+    <Content Include="Resources\NewFile3.txt" />
+    <Content Include="Resources\NewFile4.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

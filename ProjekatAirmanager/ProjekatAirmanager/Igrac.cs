@@ -80,7 +80,7 @@ namespace ProjekatAirmanager
             int c = rand.Next(1,10000);
             if(c<granica)
             {
-                form.nacrtajLet(form.G, avionlinija.PocetniAerodrom.Kord, avionlinija.KrajnjiAerodrom.Kord, incident, a.Brzina);
+                form.NacrtajLet(new Aerodrom(avionlinija.PocetniAerodrom), new Aerodrom(avionlinija.KrajnjiAerodrom), incident, a.Brzina);
             }
         }
 
