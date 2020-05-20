@@ -12,6 +12,7 @@ namespace ProjekatAirmanager
 {
     public partial class Form1 : Form
     {
+        Form2 Kupiavion;
         //1 minut = 1 dan
         public struct Avionce
         {
@@ -31,8 +32,9 @@ namespace ProjekatAirmanager
             public double Inc { get => inc; set => inc = value; }
         }
 
-        public Form1()
+        public Form1(Form2 forma)
         {
+            Kupiavion = forma;
             InitializeComponent();
         }
         Graphics g;
@@ -115,6 +117,11 @@ namespace ProjekatAirmanager
         {
             Tuple<float, float> a = GraphicsCoordinates(A);
             Tuple<float, float> b = GraphicsCoordinates(B);
+        }
+
+        private void KupiAvion_Click(object sender, EventArgs e)
+        {
+            Kupiavion.Enabled = true;
         }
     }
 }
