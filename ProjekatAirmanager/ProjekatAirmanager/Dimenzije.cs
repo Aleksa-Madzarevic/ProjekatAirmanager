@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjekatAirmanager
 {
-    class Dimenzije
+    public class Dimenzije
     {
         private double širina;
         private double visina;

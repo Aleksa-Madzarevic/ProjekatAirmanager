@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ProjekatAirmanager
@@ -29,8 +30,11 @@ namespace ProjekatAirmanager
             public double Korak { get => korak; set => korak = value; }
         }
 
+        
+
         public Form1()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
         Graphics g;
@@ -43,7 +47,7 @@ namespace ProjekatAirmanager
         int ratio;//this number represents the width of the pictureBox divided by the width of the picture of the plane
         double realTimeRatio; //= 1440 minutes in the real world divided by the equivalent amount of time in the game (in minutes) 
         int currentPlayer;
-        int timeLeft;
+        int timeLeft;//in seconds
         int day;
         int dayOfTheWeek;
         #region svojstva
@@ -52,7 +56,6 @@ namespace ProjekatAirmanager
         public int NumberOfPlayers { get => numberOfPlayers; set => numberOfPlayers = value; }
         public int StartingMoney { get => startingMoney; set => startingMoney = value; }
         public int MoveDuration { get => moveDuration; set => moveDuration = value; }
-        public int Tezina { get => tezina; set => tezina = value; }
         #endregion
         private void button1_Click(object sender, EventArgs e)
         {
@@ -87,14 +90,14 @@ namespace ProjekatAirmanager
                 avion.Inc = 0;
             avion.Slicica = new PictureBox();
             Image AirplaneImg = new Bitmap(Resources.avion);
-            avion.Slicica.BackgroundImage = RotateImage(AirplaneImg,Convert.ToSingle((180/Math.PI) * A.Ugao(B)));
+            avion.Slicica.BackgroundImage = RotateImage(AirplaneImg, Convert.ToSingle((180 / Math.PI) * A.Ugao(B)));
             avion.Slicica.BackgroundImageLayout = ImageLayout.Stretch;
             avion.Slicica.Width = pictureBox1.Width / ratio;
             avion.Slicica.Height = avion.Slicica.Width;
             avion.Slicica.Location = new Point(pictureBox1.Location.X + Convert.ToInt32(Math.Round(GraphicsCoordinates(a).Item1)), pictureBox1.Location.Y + Convert.ToInt32(Math.Round(GraphicsCoordinates(b).Item2)));
             this.Controls.Add(avion.Slicica);
 
-            avion.Korak = (Math.Round((((realTimeRatio * timer.Interval) / (A.Rastojanje(B) / brzina)))*1000))/1000;
+            avion.Korak = (Math.Round((((realTimeRatio * timer.Interval) / (A.Rastojanje(B) / brzina))) * 1000)) / 1000;
 
             VisualAirplanes.Add(avion);
 
@@ -107,7 +110,7 @@ namespace ProjekatAirmanager
                 Avionce t = VisualAirplanes[i];
                 t.Koef += t.Korak;
                 Tuple<float, float> location = LocationOfThePlane(t.A, t.B, t.Koef);
-                if (t.Koef >= t.Inc && t.Inc!=0)
+                if (t.Koef >= t.Inc && t.Inc != 0)
                 {
                     t.Slicica = new PictureBox();
                     t.Slicica.BackgroundImage = Resources.incident;
@@ -115,27 +118,53 @@ namespace ProjekatAirmanager
                     t.Slicica.Width = pictureBox1.Width / ratio;
                     t.Slicica.Height = t.Slicica.Width;
                 }
-                if (t.Koef >= 0.999) { 
+                if (t.Koef >= 0.999)
+                {
                     this.Controls.Remove(t.Slicica);
                     VisualAirplanes.RemoveAt(i);
-                        }
+                }
                 else { t.Slicica.Location = new Point(Convert.ToInt32(location.Item1) + pictureBox1.Location.X, Convert.ToInt32(location.Item2) + pictureBox1.Location.Y); }
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Enabled = false;
             UlaznaForma ulazna = new UlaznaForma(this);
             ulazna.Show();
-            players = new Igrac[numberOfPlayers];   
+            ulazna.Visible = true;
+            this.TopMost = false;
+            ulazna.TopMost = true;
+            
+        }
+        internal void ContinueLoading()
+        {
+            this.TopMost = true;
+            players = new Igrac[numberOfPlayers];
             ratio = 100;
             realTimeRatio = 1440;
             currentPlayer = 0;
-
+            lblVreme.Text = Convert.ToString(moveDuration);
+            timeLeft = moveDuration;
+            lblDan.Text = "1/" + Convert.ToString(gameDuration);
+            string str="";
+            dayOfTheWeek = new Random().Next(0, 7);
+            switch(dayOfTheWeek)
+            {
+                case 0: str = "ponedeljak"; break;
+                case 1: str = "utorak"; break;
+                case 2: str = "sreda"; break;
+                case 3: str = "četvrtak"; break;
+                case 4: str = "petak"; break;
+                case 5: str = "subota"; break;
+                case 6: str = "nedelja"; break;
+            }
+            lblDanUNedelji.Text = str;
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                players[i]=new Igrac(new List<ParkingMesto>,new List<AvionskaLinija>,new List<Avion>,startingMoney, )
+            }
             timer.Start();
         }
-
         private void timer_Tick(object sender, EventArgs e)
         {
 
