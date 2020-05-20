@@ -44,26 +44,30 @@
             // 
             this.pictureBox1.BackgroundImage = global::ProjekatAirmanager.Properties.Resources.mapaSveta;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1216, 617);
+            this.pictureBox1.Size = new System.Drawing.Size(912, 501);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // kupiAvion
             // 
-            this.kupiAvion.Location = new System.Drawing.Point(1234, 43);
+            this.kupiAvion.Location = new System.Drawing.Point(926, 35);
+            this.kupiAvion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kupiAvion.Name = "kupiAvion";
-            this.kupiAvion.Size = new System.Drawing.Size(75, 193);
+            this.kupiAvion.Size = new System.Drawing.Size(56, 157);
             this.kupiAvion.TabIndex = 6;
             this.kupiAvion.Text = "Kupi Avion";
             this.kupiAvion.UseVisualStyleBackColor = true;
+            this.kupiAvion.Click += new System.EventHandler(this.KupiAvion_Click);
             // 
             // KupiMesto
             // 
-            this.KupiMesto.Location = new System.Drawing.Point(1234, 242);
+            this.KupiMesto.Location = new System.Drawing.Point(926, 197);
+            this.KupiMesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KupiMesto.Name = "KupiMesto";
-            this.KupiMesto.Size = new System.Drawing.Size(75, 209);
+            this.KupiMesto.Size = new System.Drawing.Size(56, 170);
             this.KupiMesto.TabIndex = 7;
             this.KupiMesto.Text = "Kupi Parking Mesto";
             this.KupiMesto.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1234, 457);
+            this.button3.Location = new System.Drawing.Point(926, 371);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 203);
+            this.button3.Size = new System.Drawing.Size(56, 165);
             this.button3.TabIndex = 8;
             this.button3.Text = "Napravi liniju";
             this.button3.UseVisualStyleBackColor = true;
@@ -84,35 +89,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 8);
+            this.label2.Location = new System.Drawing.Point(153, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "label2";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(64, 3);
+            this.button1.Location = new System.Drawing.Point(48, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 29);
+            this.button1.Size = new System.Drawing.Size(100, 24);
             this.button1.TabIndex = 11;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1321, 672);
+            this.ClientSize = new System.Drawing.Size(991, 546);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -120,6 +128,7 @@
             this.Controls.Add(this.KupiMesto);
             this.Controls.Add(this.kupiAvion);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
