@@ -11,9 +11,9 @@ using System.IO;
 
 namespace ProjekatAirmanager
 {
-    public partial class Form2 : Form
+    public partial class KupiAvion : Form
     {
-        public Form2()
+        public KupiAvion()
         {
             InitializeComponent();
         }
