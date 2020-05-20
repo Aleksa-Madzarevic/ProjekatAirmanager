@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,14 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\incident.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NewFile1.txt" />
-    <Content Include="NewFile2.txt" />
-    <Content Include="Resources\NewFile1.txt" />
-    <Content Include="Resources\NewFile2.txt" />
-    <Content Include="Resources\NewFile3.txt" />
-    <Content Include="Resources\NewFile4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
