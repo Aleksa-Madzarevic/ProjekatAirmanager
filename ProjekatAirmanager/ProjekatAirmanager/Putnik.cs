@@ -11,7 +11,7 @@ namespace ProjekatAirmanager
         double m;
         int god;
         bool SpecPr;
-        double Prob;
+        double Prob; //double između 0 i 1 koji predstavlja verovatnoću da se dogodi problem
 
         public Putnik(double a, int b, bool d, double e)
         {

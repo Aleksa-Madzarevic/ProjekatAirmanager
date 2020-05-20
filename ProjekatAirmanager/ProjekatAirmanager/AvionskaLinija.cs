@@ -15,7 +15,8 @@ namespace ProjekatAirmanager
         Avion[] avioni;
         List<Let> letovi;
         public int[,] raspored; //matrica 24x7
-        //ako je br recimo na poziciji [3][18] to znači da je avion avioni[br] u stanju leta na ovoj liniji četvrtkom od 18:00 do 19:00
+        //ako je broj a recimo na poziciji [3][18] veći jednak od nula to znači da avion avioni[a] poleće na ovoj liniji četvrtkom od 18:00 do 19:00
+        //ako je broj a recimo na poziciji [4][7] manji od nule to znači da avion avioni[-a-1] leti ili sleće (ne poleće) na ovoj liniji petkom od 07:00 do 08:00
         int prosecanbrputnika;
         public AvionskaLinija(AvionskaLinija al)
         {
