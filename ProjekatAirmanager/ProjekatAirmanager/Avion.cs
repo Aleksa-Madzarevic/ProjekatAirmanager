@@ -8,6 +8,7 @@ namespace ProjekatAirmanager
 {
     class Avion
     {
+        string vrsta;
         double cena;
         int brputnika;
         int brstjuardesa;
@@ -15,8 +16,10 @@ namespace ProjekatAirmanager
         double maksdist;
         Dimenzije dim;
         double brzina;
-        public Avion(double c, int pu, int s, int pi, double m, double v,double š, double d, double b)
+        public Avion(){}
+        public Avion(string vr,double c, int pu, int s, int pi, double m, double v,double š, double d, double b)
         {
+            vrsta = vr;
             cena = c;
             brputnika = pu;
             brstjuardesa =s;
@@ -27,6 +30,7 @@ namespace ProjekatAirmanager
         }
         public Avion(Avion a)
         {
+            vrsta = a.vrsta;
             cena = a.cena;
             brputnika = a.brputnika;
             brstjuardesa = a.brstjuardesa;
