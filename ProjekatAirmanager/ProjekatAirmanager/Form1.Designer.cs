@@ -33,7 +33,7 @@
             this.kupiAvion = new System.Windows.Forms.Button();
             this.KupiMesto = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.NapraviLiniju = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,22 +72,20 @@
             this.KupiMesto.TabIndex = 7;
             this.KupiMesto.Text = "Kupi Parking Mesto";
             this.KupiMesto.UseVisualStyleBackColor = true;
-            this.KupiMesto.Click += new System.EventHandler(this.KupiMesto_Click);
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // NapraviLiniju
+            // button3
             // 
-            this.NapraviLiniju.Location = new System.Drawing.Point(1235, 334);
-            this.NapraviLiniju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NapraviLiniju.Name = "NapraviLiniju";
-            this.NapraviLiniju.Size = new System.Drawing.Size(75, 139);
-            this.NapraviLiniju.TabIndex = 8;
-            this.NapraviLiniju.Text = "Napravi liniju";
-            this.NapraviLiniju.UseVisualStyleBackColor = true;
-            this.NapraviLiniju.Click += new System.EventHandler(this.NapraviLiniju_Click);
+            this.button3.Location = new System.Drawing.Point(1235, 334);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 139);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Napravi liniju";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -125,7 +123,6 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -136,7 +133,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.NapraviLiniju);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.KupiMesto);
             this.Controls.Add(this.kupiAvion);
             this.Controls.Add(this.pictureBox1);
@@ -155,7 +152,7 @@
         private System.Windows.Forms.Button kupiAvion;
         private System.Windows.Forms.Button KupiMesto;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Button NapraviLiniju;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
