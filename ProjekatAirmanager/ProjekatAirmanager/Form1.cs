@@ -41,6 +41,7 @@ namespace ProjekatAirmanager
         List<Avionce> VisualAirplanes;
         int moveDuration; //u sekundama
         Igrac[] players;
+        Label[] lblPlayers;
         int gameDuration; //in days
         int numberOfPlayers;
         int startingMoney;
@@ -140,6 +141,7 @@ namespace ProjekatAirmanager
         {
             this.TopMost = true;
             players = new Igrac[numberOfPlayers];
+            lblPlayers = new Label[numberOfPlayers];
             ratio = 100;
             realTimeRatio = 1440;
             currentPlayer = 0;
@@ -159,17 +161,48 @@ namespace ProjekatAirmanager
                 case 6: str = "nedelja"; break;
             }
             lblDanUNedelji.Text = str;
+            int w=0;
             for (int i = 0; i < numberOfPlayers; i++)
             {
-                players[i]=new Igrac(new List<ParkingMesto>,new List<AvionskaLinija>,new List<Avion>,startingMoney, )
+                players[i] = new Igrac(new List<ParkingMesto>(), new List<AvionskaLinija>(), new List<Avion>(), startingMoney);
+                Label l = new Label();
+                l.Location = new Point(lblDanUNedelji.Location.X + lblDanUNedelji.Width+50+w, lblDanUNedelji.Location.Y);
+                l.Text = Convert.ToString(startingMoney);
+                w = l.Width + w;
+                l.AutoSize = true;
+                Controls.Add(l);
+                lblPlayers[i] = l;
+                generatePassengers(100, i);
             }
+            lblPlayers[currentPlayer].ForeColor = Color.Red;
             timer.Start();
         }
-        private void timer_Tick(object sender, EventArgs e)
+
+        private void generatePassengers(int v, int i)
+        {
+            for (int i = 0; i < v; i++)
+            {
+                bool b;
+                Random r = new Random();
+                if (r.Next(1, 101) < 6)
+                    b = true;
+                else
+                    b = false;
+                players[i].Putnici.Add(new Putnik(0,Igrac.nasum(30.9,Math.Sqrt(2)/2),b,);
+            }
+        }
+
+        private void timer_Tick(object sender, EventArgs e) { 
+            for (int i = 0; i < players.Length(); i++) {
+                for (int j = 0; j < players[i].Linije.Count; j++) { 
+                    
+                }          
+            }          
+        }
+        private void KrajPoteza()
         {
 
         }
-
         private Tuple<float, float> GraphicsCoordinates(Tuple<double, double> coordinates)
         {
             float x = (float)coordinates.Item1;
