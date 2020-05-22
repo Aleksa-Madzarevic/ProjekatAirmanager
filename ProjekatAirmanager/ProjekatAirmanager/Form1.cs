@@ -9,7 +9,17 @@ namespace ProjekatAirmanager
 {
     public partial class Form1 : Form
     {
-
+        List<Aerodrom> aerodromi;
+        /*aerodromi.Add(new Aerodrom("Beograd",new Tuple<double,double>(44,20)));
+        aerodromi.Add(new Aerodrom("Njujork",new Tuple<double,double>(40,-74)));
+        aerodromi.Add(new Aerodrom("London",new Tuple<double, double>(51,0)));
+        aerodromi.Add(new Aerodrom("Peking",new Tuple<double, double>(39,116)));
+        aerodromi.Add(new Aerodrom("Rio",new Tuple<double, double>(22,-43)));
+        aerodromi.Add(new Aerodrom("Moskva",new Tuple<double, double>(55,37)));
+        aerodromi.Add(new Aerodrom("Tokio",new Tuple<double, double>(44,20)));
+        aerodromi.Add(new Aerodrom("",new Tuple<double, double>(44,20)));
+        aerodromi.Add(new Aerodrom("Beograd",new Tuple<double,double>(44,20)));*/
+          
         public struct Avionce
         {
             PictureBox slicica;
@@ -200,6 +210,22 @@ namespace ProjekatAirmanager
 
             //return the image
             return bmp;
+        }
+
+        private void KupiMesto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NapraviLiniju_Click(object sender, EventArgs e)
+        {
+            var NapraviLinijuF = new Form1();
+            NapraviLinijuF.Show();
         }
     }
 }
