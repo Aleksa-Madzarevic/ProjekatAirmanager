@@ -17,7 +17,6 @@ namespace ProjekatAirmanager
         aerodromi.Add(new Aerodrom("Rio",new Tuple<double, double>(22,-43)));
         aerodromi.Add(new Aerodrom("Moskva",new Tuple<double, double>(55,37)));
         aerodromi.Add(new Aerodrom("Tokio",new Tuple<double, double>(44,20)));
-        aerodromi.Add(new Aerodrom("",new Tuple<double, double>(44,20)));
         aerodromi.Add(new Aerodrom("Beograd",new Tuple<double,double>(44,20)));*/
           
         public struct Avionce
