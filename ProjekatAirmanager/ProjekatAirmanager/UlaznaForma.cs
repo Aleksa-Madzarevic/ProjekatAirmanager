@@ -27,10 +27,7 @@ namespace ProjekatAirmanager
             glavna.NumberOfPlayers = Convert.ToInt32(numberOfPlayers.Value);
             glavna.StartingMoney = Convert.ToInt32(startingMoney.Value);
             glavna.MoveDuration = Convert.ToInt32(moveDuration.Value);
-            if (RBtnEkstremno.Checked) glavna.Tezina = 3;
-            else if (RBtnTeško.Checked) glavna.Tezina = 2;
-            else if (RBtnSrednje.Checked) glavna.Tezina = 1;
-            else glavna.Tezina  =  0;
+            
 
             glavna.Enabled = true;
             this.Close();

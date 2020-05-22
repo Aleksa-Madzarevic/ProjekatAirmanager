@@ -37,24 +37,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.RBtnLako = new System.Windows.Forms.RadioButton();
-            this.RBtnSrednje = new System.Windows.Forms.RadioButton();
-            this.RBtnTeško = new System.Windows.Forms.RadioButton();
-            this.RBtnEkstremno = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.moveDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberOfPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startingMoney)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 183);
+            this.button1.Location = new System.Drawing.Point(12, 102);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 56);
+            this.button1.Size = new System.Drawing.Size(340, 60);
             this.button1.TabIndex = 0;
             this.button1.Text = "Započni igru";
             this.button1.UseVisualStyleBackColor = true;
@@ -185,77 +178,11 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "trajanje igre u danima:";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.RBtnEkstremno);
-            this.panel1.Controls.Add(this.RBtnTeško);
-            this.panel1.Controls.Add(this.RBtnSrednje);
-            this.panel1.Controls.Add(this.RBtnLako);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 75);
-            this.panel1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Težina:";
-            // 
-            // RBtnLako
-            // 
-            this.RBtnLako.AutoSize = true;
-            this.RBtnLako.Location = new System.Drawing.Point(64, 7);
-            this.RBtnLako.Name = "RBtnLako";
-            this.RBtnLako.Size = new System.Drawing.Size(60, 21);
-            this.RBtnLako.TabIndex = 1;
-            this.RBtnLako.TabStop = true;
-            this.RBtnLako.Text = "Lako";
-            this.RBtnLako.UseVisualStyleBackColor = true;
-            // 
-            // RBtnSrednje
-            // 
-            this.RBtnSrednje.AutoSize = true;
-            this.RBtnSrednje.Location = new System.Drawing.Point(64, 34);
-            this.RBtnSrednje.Name = "RBtnSrednje";
-            this.RBtnSrednje.Size = new System.Drawing.Size(78, 21);
-            this.RBtnSrednje.TabIndex = 2;
-            this.RBtnSrednje.TabStop = true;
-            this.RBtnSrednje.Text = "Srednje";
-            this.RBtnSrednje.UseVisualStyleBackColor = true;
-            // 
-            // RBtnTeško
-            // 
-            this.RBtnTeško.AutoSize = true;
-            this.RBtnTeško.Location = new System.Drawing.Point(201, 7);
-            this.RBtnTeško.Name = "RBtnTeško";
-            this.RBtnTeško.Size = new System.Drawing.Size(68, 21);
-            this.RBtnTeško.TabIndex = 3;
-            this.RBtnTeško.TabStop = true;
-            this.RBtnTeško.Text = "Teško";
-            this.RBtnTeško.UseVisualStyleBackColor = true;
-            // 
-            // RBtnEkstremno
-            // 
-            this.RBtnEkstremno.AutoSize = true;
-            this.RBtnEkstremno.Location = new System.Drawing.Point(201, 34);
-            this.RBtnEkstremno.Name = "RBtnEkstremno";
-            this.RBtnEkstremno.Size = new System.Drawing.Size(96, 21);
-            this.RBtnEkstremno.TabIndex = 4;
-            this.RBtnEkstremno.TabStop = true;
-            this.RBtnEkstremno.Text = "Ekstremno";
-            this.RBtnEkstremno.UseVisualStyleBackColor = true;
-            // 
             // UlaznaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 251);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(364, 173);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -272,8 +199,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gameDuration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberOfPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startingMoney)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,11 +215,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton RBtnEkstremno;
-        private System.Windows.Forms.RadioButton RBtnTeško;
-        private System.Windows.Forms.RadioButton RBtnSrednje;
-        private System.Windows.Forms.RadioButton RBtnLako;
-        private System.Windows.Forms.Label label5;
     }
 }

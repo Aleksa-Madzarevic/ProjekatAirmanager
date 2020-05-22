@@ -1,6 +1,6 @@
 ﻿namespace ProjekatAirmanager
 {
-    partial class Form2
+    partial class KupiAvion
     {
         /// <summary>
         /// Required designer variable.
