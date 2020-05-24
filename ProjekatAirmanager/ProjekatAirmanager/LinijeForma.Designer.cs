@@ -75,13 +75,13 @@
             "Moskva"});
             this.checkedListBox1.Location = new System.Drawing.Point(25, 120);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(190, 361);
+            this.checkedListBox1.Size = new System.Drawing.Size(190, 242);
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // napraviLiniju
             // 
-            this.napraviLiniju.Location = new System.Drawing.Point(459, 516);
+            this.napraviLiniju.Location = new System.Drawing.Point(380, 417);
             this.napraviLiniju.Name = "napraviLiniju";
             this.napraviLiniju.Size = new System.Drawing.Size(108, 45);
             this.napraviLiniju.TabIndex = 2;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(543, 230);
+            this.label3.Location = new System.Drawing.Point(535, 230);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 8;
@@ -110,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(568, 265);
+            this.label4.Location = new System.Drawing.Point(535, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 9;
@@ -135,7 +135,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(658, 490);
+            this.label6.Location = new System.Drawing.Point(532, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 17);
             this.label6.TabIndex = 12;
@@ -143,7 +143,7 @@
             // 
             // validSve
             // 
-            this.validSve.Location = new System.Drawing.Point(764, 487);
+            this.validSve.Location = new System.Drawing.Point(638, 331);
             this.validSve.Name = "validSve";
             this.validSve.Size = new System.Drawing.Size(100, 22);
             this.validSve.TabIndex = 13;
@@ -153,7 +153,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(798, 51);
+            this.label7.Size = new System.Drawing.Size(832, 68);
             this.label7.TabIndex = 14;
             this.label7.Text = resources.GetString("label7.Text");
             // 
@@ -162,7 +162,7 @@
             this.izborAviona.FormattingEnabled = true;
             this.izborAviona.Location = new System.Drawing.Point(272, 120);
             this.izborAviona.Name = "izborAviona";
-            this.izborAviona.Size = new System.Drawing.Size(160, 361);
+            this.izborAviona.Size = new System.Drawing.Size(173, 242);
             this.izborAviona.TabIndex = 15;
             this.izborAviona.SelectedIndexChanged += new System.EventHandler(this.izborAviona_SelectedIndexChanged);
             // 
@@ -177,7 +177,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(326, 88);
+            this.label8.Location = new System.Drawing.Point(335, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 17;
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 584);
+            this.ClientSize = new System.Drawing.Size(880, 500);
             this.Controls.Add(this.duzinaPuta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Vikend);

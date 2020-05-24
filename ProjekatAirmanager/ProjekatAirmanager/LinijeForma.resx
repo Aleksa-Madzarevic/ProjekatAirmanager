@@ -118,8 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label7.Text" xml:space="preserve">
-    <value>Izaberite po 1 aerodrom. Nakon toga će se u odgovarajućem polju prikazati dužina leta na osnovu koje dalje birate raspored. 
-Pazite da razmak između dva leta bude jednak barem dužini jednog leta. 
-Takođe, u odgovarajućem polju će konstanto pisati da li je sve u redu, tako da lako možete primetiti da li greške postoje.</value>
+    <value>Izaberite tačno dva aerodroma i dva aviona. Nakon toga će se u odgovarajućim poljima prikazati dužina i procenjeno trajanje puta. 
+Na osnovu njih treba da izaberete vreme poletanja aviona (u oba smera!). Kada završite kliknite na odgovarajuće dugme. 
+Ukoliko dođe do bilo kakve greške prilikom unosa, izaći će odgovarajuća poruka i moći ćete sve podatke da unesete ponovo. 
+Takođe, u svakom trenutku pogledom na odgovarajuće polje možete proveriti da li su trenutni podaci validni.
+</value>
   </data>
 </root>
