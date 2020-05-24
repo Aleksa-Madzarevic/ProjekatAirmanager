@@ -13,6 +13,14 @@ namespace ProjekatAirmanager
         Avion airplane;
         bool desioSeIncident;
 
+        public Let()
+        {
+            duzinaTrajanja = 0;
+            nizPutnika = null;
+            airplane = new Avion();
+            desioSeIncident = false;
+        }
+
         public Let(Let l)
         {
             duzinaTrajanja = l.duzinaTrajanja;

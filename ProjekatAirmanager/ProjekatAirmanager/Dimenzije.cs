@@ -17,6 +17,16 @@ namespace ProjekatAirmanager
             this.visina = visina;
             this.dužina = dužina;
         }
+
+        public Dimenzije(string s)
+        {
+            int prvi_razmak = s.IndexOf(" ");
+            širina = Convert.ToDouble(s.Substring(0, prvi_razmak));
+            int drugi_razmak=s.LastIndexOf(" ");
+            visina = Convert.ToDouble(s.Substring(prvi_razmak + 1, drugi_razmak - prvi_razmak - 1));
+            dužina = Convert.ToDouble(s.Substring(drugi_razmak + 1));
+        }
+
         public double Širina
         {
             get { return širina; }
@@ -44,6 +54,11 @@ namespace ProjekatAirmanager
             if (d1.dužina < d2.dužina && d1.širina < d2.širina && d1.visina < d2.visina)
                 return true;
             return false;
+        }
+
+        public string prebaci_dimenzije_u_string()
+        {
+            return širina.ToString() +" "+ visina.ToString() +" "+ dužina.ToString();
         }
     }
 }

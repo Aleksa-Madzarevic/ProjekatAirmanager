@@ -39,6 +39,31 @@ namespace ProjekatAirmanager
             dim = a.dim;
             brzina = a.brzina;
         }
+
+        public Avion(string s)
+        {
+            int prvi_razmak = s.IndexOf(" ");
+            vrsta = s.Substring(0,prvi_razmak);
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            cena = Convert.ToDouble(s.Substring(0, prvi_razmak));
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            brputnika = Convert.ToInt32(s.Substring(0, prvi_razmak));
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            brstjuardesa = Convert.ToInt32(s.Substring(0, prvi_razmak));
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            brpilota = Convert.ToInt32(s.Substring(0, prvi_razmak));
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            maksdist = Convert.ToDouble(s.Substring(0, prvi_razmak));
+            s.Remove(0, prvi_razmak + 1);
+            prvi_razmak = s.IndexOf(" ");
+            dim = new Dimenzije(s.Substring(0, prvi_razmak));
+        }
+
         public double Cena
         {
             get { return cena; }
@@ -69,5 +94,11 @@ namespace ProjekatAirmanager
         {
             get { return brzina; }
         }
+
+        public string uString()
+        {
+            return vrsta + " " + cena.ToString() + " "+brputnika.ToString() +" "+ brstjuardesa.ToString() +" "+ brpilota.ToString() +" "+ maksdist.ToString() +" "+ dim.prebaci_dimenzije_u_string();
+        }
+
     }
 }

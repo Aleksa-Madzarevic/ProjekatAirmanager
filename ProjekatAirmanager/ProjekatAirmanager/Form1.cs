@@ -10,7 +10,7 @@ namespace ProjekatAirmanager
 {
     public partial class Form1 : Form
     {
-
+        public List<Aerodrom> aerodromi;
         public struct Avionce
         {
             PictureBox slicica;
@@ -39,15 +39,16 @@ namespace ProjekatAirmanager
         }
         Graphics g;
         List<Avionce> VisualAirplanes;
+        public double brzinaAviona;
         int moveDuration; //u sekundama
-        Igrac[] players;
+        public Igrac[] players;
         Label[] lblPlayers;
         int gameDuration; //in days
         int numberOfPlayers;
         int startingMoney;
         int ratio;//this number represents the width of the pictureBox divided by the width of the picture of the plane
         double realTimeRatio; //= 1440 minutes in the real world divided by the equivalent amount of time in the game (in minutes) 
-        int currentPlayer;
+        public int currentPlayer;
         int timeLeft;//in seconds
         int day;
         int dayOfTheWeek;
@@ -180,7 +181,7 @@ namespace ProjekatAirmanager
 
         private void generatePassengers(int v, int i)
         {
-            for (int i = 0; i < v; i++)
+            for (i = 0; i < v; i++)
             {
                 bool b;
                 Random r = new Random();
@@ -188,7 +189,7 @@ namespace ProjekatAirmanager
                     b = true;
                 else
                     b = false;
-                players[i].Putnici.Add(new Putnik(0,Igrac.nasum(30.9,Math.Sqrt(2)/2),b,);
+                players[i].Putnici.Add(new Putnik(0,Igrac.nasum(30.9,Math.Sqrt(2)/2),b));
             }
         }
 
@@ -263,6 +264,12 @@ namespace ProjekatAirmanager
 
             //return the image
             return bmp;
+        }
+
+        private void LinijeForma_Click(object sender, EventArgs e)
+        {
+            var LinijeForma = new Form1();
+            LinijeForma.Show();
         }
     }
 }

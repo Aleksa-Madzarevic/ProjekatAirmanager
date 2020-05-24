@@ -8,18 +8,29 @@ namespace ProjekatAirmanager
 {
     public class Aerodrom
     {
+        string imeAerodroma;
         List<ParkingMesto> parkingM;
         Tuple<double, double> kord;//prva pripada (-180,180], a druga [-90,90]
         double cenaPoGejtu;
 
-        public Aerodrom(List<ParkingMesto> parkingM, Tuple<double, double> kord, double cenaPoGejtu)
+        public Aerodrom(List<ParkingMesto> parkingM, Tuple<double, double> kord, double cenaPoGejtu, string ime)
         {
+            this.imeAerodroma = ime;
             this.parkingM = parkingM;
             this.kord = kord;
             this.cenaPoGejtu = cenaPoGejtu;
         }
+        /*public Aerodrom(string imeAerodroma, Tuple<double,double> kord)
+        {
+            this.imeAerodroma = imeAerodroma;
+            this.kord = kord;
+            this.parkingM = null;
+            this.cenaPoGejtu = 1;
+        }*/
+
         public Aerodrom(Aerodrom a)
         {
+            this.imeAerodroma = a.imeAerodroma;
             this.parkingM = a.parkingM;
             this.kord = a.kord;
             this.cenaPoGejtu = a.cenaPoGejtu;
@@ -109,6 +120,12 @@ namespace ProjekatAirmanager
         {
             get { return kord; }
             set { kord = value; }
+        }
+
+        public string ImeAerodroma
+        {
+            get { return imeAerodroma; }
+            set { imeAerodroma = value; }
         }
     }
 }
