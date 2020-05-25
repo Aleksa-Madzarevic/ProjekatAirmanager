@@ -21,16 +21,13 @@ namespace ProjekatAirmanager
         double marketing; //broj između 0 i 1 koji određuje koliko se izdvaja za marketing
         double odrzavanje; //broj između 0 i 1 koji određuje koliko se izdvaja za održavanje aviona
         double bezbednost; //broj između 0 i 1 koji određuje koliko se izdvaja za bezbednost
-        public Igrac(List<ParkingMesto> p,List<AvionskaLinija> al,List<Avion> a,int n,double ko,double m,double o,double b)
+        public Igrac(List<ParkingMesto> p,List<AvionskaLinija> al,List<Avion> a,int n)
         {
-            parkingM = p;
-            linije = al;
-            avioni = a;
+            parkingM = new List<ParkingMesto>(p);
+            linije = new List<AvionskaLinija>(al);
+            avioni = new List<Avion>(a);
             novac = n;
-            osoblje = ko;
-            marketing = m;
-            odrzavanje = o;
-            bezbednost = b;
+            flights = new List<Let>();
             putnici = new List<Putnik>();
         }
 
@@ -42,12 +39,14 @@ namespace ProjekatAirmanager
         public List<ParkingMesto> ParkingM { get => parkingM; set => parkingM = value; }
         public List<AvionskaLinija> Linije { get => linije; set => linije = value; }
         public List<Avion> Avioni { get => avioni; set => avioni = value; }
+        internal List<Putnik> Putnici { get => putnici; set => putnici = value; }
+
         public void izvrsiLet(int dan, int sat, int brojLinije, Form1 form)
         {
             AvionskaLinija avionlinija = linije[brojLinije];
             Avion a = avionlinija.Avioni[avionlinija.Raspored[dan,sat]];
-            int brojPutnika = Convert.ToInt32(Math.Round(nasum(Convert.ToDouble(avionlinija.ProsecanBrPutnika), 1.0)));
-            List<Putnik> nizPutnika = new List<Putnik>(brojPutnika);
+            int brojPutnika = Convert.ToInt32(Math.Round(nasum(Convert.ToDouble(avionlinija.ProsecanBrPutnika), Math.Sqrt(2)/2)));
+            List<Putnik> nizPutnika = new List<Putnik>(brojPutnika); 
             Random rand = new Random();
             double prob=0;
             for (int i = 0; i < brojPutnika; i++)
@@ -56,7 +55,7 @@ namespace ProjekatAirmanager
                 prob += nizPutnika[i].Problem;
             }
             prob /= brojPutnika;
-            double probOstalo = (1-osoblje + 1-odrzavanje + 1-bezbednost) / 3;
+            double probOstalo = (1-osoblje + 1-odrzavanje) / 2;
             prob = (prob + probOstalo) / 2;
             prob = prob * 10000;
             bool incident=false;

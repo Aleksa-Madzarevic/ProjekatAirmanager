@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjekatAirmanager
 {
-    class ParkingMesto
+    public class ParkingMesto
     {
         private Dimenzije dimenzije;
         int CenaPoSatu;

@@ -16,6 +16,7 @@ namespace ProjekatAirmanager
         public UlaznaForma(Form1 forma)
         {
             glavna = forma;
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
@@ -27,10 +28,11 @@ namespace ProjekatAirmanager
             glavna.NumberOfPlayers = Convert.ToInt32(numberOfPlayers.Value);
             glavna.StartingMoney = Convert.ToInt32(startingMoney.Value);
             glavna.MoveDuration = Convert.ToInt32(moveDuration.Value);
-            
 
+            this.Visible = false;
             glavna.Enabled = true;
             this.Close();
+            glavna.ContinueLoading();
         }
 
         private void UlaznaForma_Load(object sender, EventArgs e)

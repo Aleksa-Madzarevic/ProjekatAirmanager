@@ -34,9 +34,11 @@
             this.KupiMesto = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblVreme = new System.Windows.Forms.Label();
+            this.lblDan = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtnPrikažiPosede = new System.Windows.Forms.Button();
+            this.lblDanUNedelji = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.kupiAvion.Location = new System.Drawing.Point(1235, 43);
             this.kupiAvion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kupiAvion.Name = "kupiAvion";
-            this.kupiAvion.Size = new System.Drawing.Size(75, 145);
+            this.kupiAvion.Size = new System.Drawing.Size(75, 109);
             this.kupiAvion.TabIndex = 6;
             this.kupiAvion.Text = "Kupi Avion";
             this.kupiAvion.UseVisualStyleBackColor = true;
@@ -65,10 +67,10 @@
             // 
             // KupiMesto
             // 
-            this.KupiMesto.Location = new System.Drawing.Point(1235, 192);
+            this.KupiMesto.Location = new System.Drawing.Point(1234, 156);
             this.KupiMesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KupiMesto.Name = "KupiMesto";
-            this.KupiMesto.Size = new System.Drawing.Size(75, 138);
+            this.KupiMesto.Size = new System.Drawing.Size(75, 111);
             this.KupiMesto.TabIndex = 7;
             this.KupiMesto.Text = "Kupi Parking Mesto";
             this.KupiMesto.UseVisualStyleBackColor = true;
@@ -79,49 +81,67 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1235, 334);
+            this.button3.Location = new System.Drawing.Point(1234, 271);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 139);
+            this.button3.Size = new System.Drawing.Size(75, 112);
             this.button3.TabIndex = 8;
             this.button3.Text = "Napravi liniju";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblVreme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.lblVreme.AutoSize = true;
+            this.lblVreme.Location = new System.Drawing.Point(12, 17);
+            this.lblVreme.Name = "lblVreme";
+            this.lblVreme.Size = new System.Drawing.Size(46, 17);
+            this.lblVreme.TabIndex = 9;
+            this.lblVreme.Text = "label1";
             // 
-            // label2
+            // lblDan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.lblDan.AutoSize = true;
+            this.lblDan.Location = new System.Drawing.Point(203, 17);
+            this.lblDan.Name = "lblDan";
+            this.lblDan.Size = new System.Drawing.Size(46, 17);
+            this.lblDan.TabIndex = 10;
+            this.lblDan.Text = "label2";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(64, 2);
+            this.button1.Location = new System.Drawing.Point(64, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 30);
+            this.button1.Size = new System.Drawing.Size(133, 28);
             this.button1.TabIndex = 11;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // BtnPrikažiPosede
+            // 
+            this.BtnPrikažiPosede.Location = new System.Drawing.Point(1234, 388);
+            this.BtnPrikažiPosede.Name = "BtnPrikažiPosede";
+            this.BtnPrikažiPosede.Size = new System.Drawing.Size(75, 130);
+            this.BtnPrikažiPosede.TabIndex = 12;
+            this.BtnPrikažiPosede.Text = "Prikaži posede";
+            this.BtnPrikažiPosede.UseVisualStyleBackColor = true;
+            // 
+            // lblDanUNedelji
+            // 
+            this.lblDanUNedelji.AutoSize = true;
+            this.lblDanUNedelji.Location = new System.Drawing.Point(255, 17);
+            this.lblDanUNedelji.Name = "lblDanUNedelji";
+            this.lblDanUNedelji.Size = new System.Drawing.Size(101, 17);
+            this.lblDanUNedelji.TabIndex = 13;
+            this.lblDanUNedelji.Text = "lblDanUNedelji";
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1235, 478);
+            this.button2.Location = new System.Drawing.Point(1234, 524);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 182);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 136);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Troškovi";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -130,9 +150,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1321, 672);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblDanUNedelji);
+            this.Controls.Add(this.BtnPrikažiPosede);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDan);
+            this.Controls.Add(this.lblVreme);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.KupiMesto);
             this.Controls.Add(this.kupiAvion);
@@ -153,9 +175,11 @@
         private System.Windows.Forms.Button KupiMesto;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblVreme;
+        private System.Windows.Forms.Label lblDan;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnPrikažiPosede;
+        private System.Windows.Forms.Label lblDanUNedelji;
         private System.Windows.Forms.Button button2;
     }
 }
