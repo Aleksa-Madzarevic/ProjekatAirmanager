@@ -41,14 +41,14 @@ namespace ProjekatAirmanager
         List<Avionce> VisualAirplanes;
         public double brzinaAviona;
         int moveDuration; //u sekundama
-        public Igrac[] players;
+        private Igrac[] players;
         Label[] lblPlayers;
         int gameDuration; //in days
         int numberOfPlayers;
         int startingMoney;
         int ratio;//this number represents the width of the pictureBox divided by the width of the picture of the plane
         double realTimeRatio; //= 1440 minutes in the real world divided by the equivalent amount of time in the game (in minutes) 
-        public int currentPlayer;
+        private int currentPlayer;
         int timeLeft;//in seconds
         int day;
         int dayOfTheWeek;
@@ -58,6 +58,8 @@ namespace ProjekatAirmanager
         public int NumberOfPlayers { get => numberOfPlayers; set => numberOfPlayers = value; }
         public int StartingMoney { get => startingMoney; set => startingMoney = value; }
         public int MoveDuration { get => moveDuration; set => moveDuration = value; }
+        internal Igrac[] Players { get => players; set => players = value; }
+        public int CurrentPlayer { get => currentPlayer; set => currentPlayer = value; }
         #endregion
         private void button1_Click(object sender, EventArgs e)
         {

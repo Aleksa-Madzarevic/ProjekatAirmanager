@@ -40,7 +40,6 @@
             this.validSve = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.izborAviona = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.RadniDani = new System.Windows.Forms.NumericUpDown();
             this.Vikend = new System.Windows.Forms.NumericUpDown();
@@ -166,14 +165,6 @@
             this.izborAviona.TabIndex = 15;
             this.izborAviona.SelectedIndexChanged += new System.EventHandler(this.izborAviona_SelectedIndexChanged);
             // 
-            // checkedListBox4
-            // 
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Location = new System.Drawing.Point(11, 6);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(14, 4);
-            this.checkedListBox4.TabIndex = 16;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -223,7 +214,6 @@
             this.Controls.Add(this.Vikend);
             this.Controls.Add(this.RadniDani);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkedListBox4);
             this.Controls.Add(this.izborAviona);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.validSve);
@@ -258,7 +248,6 @@
         private System.Windows.Forms.TextBox validSve;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckedListBox IzborAviona;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown RadniDani;
         private System.Windows.Forms.NumericUpDown Vikend;

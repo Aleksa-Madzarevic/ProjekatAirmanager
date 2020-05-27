@@ -12,11 +12,12 @@ namespace ProjekatAirmanager
 {
     public partial class LinijeForma : Form
     {
-        public LinijeForma()
+        public LinijeForma(Form1 main)
         {
+            this.main = main;
             InitializeComponent();
         }
-
+        Form1 main;
         bool avioni_ok;
         bool drom_ok;
         int[] drom_ind = new int[2];
@@ -111,7 +112,7 @@ namespace ProjekatAirmanager
                     }
                     else
                     {
-                        izabAvioni[dosad] = new Avion(izborAviona.Items.IndexOf(i));
+                        izabAvioni[dosad] = new Avion(main.Players[main.CurrentPlayer].Avioni[i]);
                         dosad++;
                     }
                 }
@@ -171,7 +172,7 @@ namespace ProjekatAirmanager
             int prosecan_br_putnika = (izabAvioni[0].BrPutnika + izabAvioni[1].BrPutnika) / 2;
             AvionskaLinija avioLinija = new AvionskaLinija(izabDrom[0], izabDrom[1], rastojanje_aerodroma, prosecan_br_putnika, schedule);
 
-            Form1.players[Form1.currentPlayer].linije.Add(avioLinija);
+            main.Players[Form1.currentPlayer].linije.Add(avioLinija);
         }
     }
 }
